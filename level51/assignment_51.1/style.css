@@ -1,0 +1,24 @@
+.font-100{
+    font-size: 50px;
+}
+.font-50{
+    font-size:25px;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+.text-green{
+    color: green;
+}
+.text-red{
+    color: red;
+}
+
+.mb-5{
+    margin-bottom: 100px;
+}
+.mb-3{
+    margin-bottom: 50px;
+}
