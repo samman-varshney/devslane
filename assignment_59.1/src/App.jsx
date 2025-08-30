@@ -7,14 +7,19 @@ import ProductDetail from "./components/ProductDetail";
 import Cart from "./components/CartPage";
 
 function App() {
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : {};
+  });
 
   const handleAddToCart = useCallback((prodId, quantity) => {
     const prevQuantity = cart[prodId] || 0;
-    setCart({
+    const newCart = {
       ...cart,
       [prodId]: Number(prevQuantity) + Number(quantity), // ✅ safer update
-    });
+    };
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
   }, [cart]);
 
   const totalQuantity = useMemo(
