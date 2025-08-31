@@ -24,4 +24,4 @@ function Cart({ cart, setCart }) {
     )
 }
 
-export default memo(Cart)
+export default Cart
