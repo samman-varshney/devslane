@@ -76,9 +76,7 @@ function CartList({ localCart, setLocalCart }) {
                             ? "bg-red-200 cursor-not-allowed"
                             : "bg-red-500 hover:bg-red-300"} text-white px-4 py-1 rounded ml-2 active:scale-98`}>Apply Coupon</button>
                     </div>
-                    <button onClick={() => handleUpdateCart(localCart)} className={` ${products.length <= 0
-                        ? "bg-red-200 cursor-not-allowed"
-                        : "bg-red-500 hover:bg-red-300"} col-end-15 mr-4 text-white py-1 px-2 font-semibold col-span-3 rounded active:scale-98  `}>Update Cart</button>
+                    <button onClick={() => handleUpdateCart(localCart)} className={`bg-red-500 hover:bg-red-300 col-end-15 mr-4 text-white py-1 px-2 font-semibold col-span-3 rounded active:scale-98  `}>Update Cart</button>
                 </div>
             </div>
             <CartTotal subtotal={subtotal} total={total} length={products.length} />
