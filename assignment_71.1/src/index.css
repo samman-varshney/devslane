@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Hide vertical scrollbar but allow scrolling */
+body {
+  overflow-y: scroll;   /* keeps scrolling enabled */
+}
+
+/* For Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none; /* completely removes scrollbar */
+}

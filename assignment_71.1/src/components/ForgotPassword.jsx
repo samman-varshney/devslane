@@ -2,7 +2,7 @@
   import { Formik, Form } from 'formik'
   import { LiaCartArrowDownSolid } from 'react-icons/lia';
   import * as Yup from 'yup'
-  import Input from './Input';
+  import {FormikInput} from './Input';
   import { MdEmail } from 'react-icons/md';
   import { RiLockPasswordLine } from 'react-icons/ri';
   import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@
                 onSubmit={onSubmit}
             >
             <Form noValidate>
-              <Input type="email" Component={MdEmail} label="Email" id="email" name="email" />
+              <FormikInput type="email" Component={MdEmail} label="Email" id="email" name="email" />
               <button type="submit" className='bg-white text-[#264eca] rounded-md px-4 py-2 w-full active:scale-99'>Send Reset Link</button>
             </Form>
           </Formik>
