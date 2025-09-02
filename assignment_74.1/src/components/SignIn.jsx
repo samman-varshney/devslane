@@ -21,7 +21,7 @@ const onSubmit = async (values, bag) => {
         localStorage.setItem('token', response.token);
         const userDetails = await getUserDetails(response.token);
         bag.props.setUser(userDetails);
-        bag.props.setAlert({type: 'success', message: 'Signed In Successfully!'});
+        bag.props.setAlert({type: 'success', message: `Welcome back ${userDetails.full_name}`});
     }catch(err){
         console.error(err);
         bag.props.setAlert({type: 'error', message: 'Oops! Sign In failed'});

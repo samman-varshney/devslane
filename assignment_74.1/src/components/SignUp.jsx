@@ -20,7 +20,7 @@ const onSubmit = async (values, bag) => {
       localStorage.setItem('token',data.token);
       const userDetails = await getUserDetails(data.token);
       bag.props.setUser(userDetails);
-      bag.props.setAlert({type: 'success', message: 'Signed Up successfully'});
+      bag.props.setAlert({type: 'success', message: `Welcome to AwesomeBuy ${userDetails.full_name}`});
 
     }catch(err){
       console.error(err);
