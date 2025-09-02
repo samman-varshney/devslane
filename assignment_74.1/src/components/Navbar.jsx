@@ -22,7 +22,8 @@ function Navbar({ totalQuantity }) {
 
   const handleLogout = useCallback(() => { 
     localStorage.removeItem('token'); 
-    setAlert({type: 'success', message: `See you soon ${user.full_name}`})
+    const full_name = user?.full_name || '';
+    setAlert({type: 'success', message: `See you soon ${full_name}`})
     setUser(null); 
     navigate('/signIn');
   }, [])
